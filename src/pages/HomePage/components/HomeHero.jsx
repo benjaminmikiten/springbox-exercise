@@ -79,7 +79,7 @@ const HeroSections = () => {
 const HomeHero = () => {
   return (
     <StyledHomeHero>
-      <ScrollWrapper>
+      <ScrollWrapper duration={"100%"} triggerHook={"onLeave"}>
         <HeroSections />
         <HeroAnimation />
       </ScrollWrapper>

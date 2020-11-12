@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-
+import { ScrollWrapperContext } from "../../../components/ScrollWrapper";
 const AnimationLayer = styled.div``;
 
 const AnimationLayers = styled.div`
@@ -33,6 +33,8 @@ const StyledHeroAnimation = styled.div`
 `;
 
 const HeroAnimation = () => {
+  const progress = useContext(ScrollWrapperContext);
+  console.log(progress);
   return (
     <StyledHeroAnimation>
       <StickyWrapper>
