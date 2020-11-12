@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const StyledLayout = styled.div``;
 
 const Layout = ({ children }) => {
   return (
     <StyledLayout>
-      {/* <Header /> */}
+      <Header />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </StyledLayout>
   );
 };
