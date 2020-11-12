@@ -29,10 +29,12 @@ const COLORS_PALETTE = {
 const COLORS_SEMANTIC = {
   background: COLORS_PALETTE.clouds,
   type: COLORS_PALETTE.midnightBlue,
+  typeOnDark: COLORS_PALETTE.clouds,
   code: COLORS_PALETTE.clouds,
   codeBackground: COLORS_PALETTE.midnightBlue,
   interactive: COLORS_PALETTE.peterRiver,
   interactiveHover: COLORS_PALETTE.belizeHole,
+  footerBackground: COLORS_PALETTE.midnightBlue,
 };
 
 const GRID = {

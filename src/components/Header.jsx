@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledHeader = styled.header`
   z-index: ${({ theme }) => theme.zIndexes.header};
+  background-color: ${({ theme }) => theme.colors.background};
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +18,6 @@ const StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border: solid 1px green;
   }
 `;
 
@@ -25,12 +25,9 @@ const Header = () => {
   return (
     <StyledHeader>
       <div>
-        LOGO
-        {/* <Logo /> */}
-        NAVIGATION
-        {/* <Navigation /> */}
-        DEMO BUTTON
-        {/* <DemoButton /> */}
+        <div>LOGO</div>
+        <div>NAVIGATION</div>
+        <div>DEMO BUTTON</div>
       </div>
     </StyledHeader>
   );

@@ -3,22 +3,23 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   z-index: ${({ theme }) => theme.zIndexes.footer};
+  background-color: ${({ theme }) => theme.colors.footerBackground};
   width: 100%;
   > div {
     ${({ theme }) => theme.grid.LayoutContainer}
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border: solid 1px green;
+    color: ${({ theme }) => theme.colors.typeOnDark};
   }
 `;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <div>{/* FOOTER CONTENTS */}</div>
+      <div>FOOTER CONTENT</div>
     </StyledFooter>
   );
 };
