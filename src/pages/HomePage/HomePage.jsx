@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HomeHero from "./components/HomeHero";
+import PartnersSection from "./components/PartnersSection";
 
 const StyledHomePage = styled.div``;
 
@@ -8,7 +9,7 @@ const HomePage = () => {
   return (
     <StyledHomePage>
       <HomeHero />
-      {/* PartnersSection */}
+      <PartnersSection />
       {/* OurSolutionsSection */}
       {/* CovidSolutionsSection */}
       {/* GetInTouchSection */}
