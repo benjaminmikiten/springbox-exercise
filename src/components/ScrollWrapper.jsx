@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, Scene } from "react-scrollmagic";
 
-const ScrollWrapperContext = React.createContext({});
+export const ScrollWrapperContext = React.createContext({});
 
 const ScrollWrapper = ({ children, ...rest }) => {
   return (
