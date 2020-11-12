@@ -25,7 +25,7 @@ const StyledHeroSection = styled.div`
   // One whole frame of the scrolling header.
 
   height: 100vh;
-  min-height: 800px;
+  min-height: 640px;
 
   > div {
     padding: 90px 0;
