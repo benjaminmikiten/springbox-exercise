@@ -170,7 +170,7 @@ const TEXT_STYLES = {
 };
 
 const Z_INDEXES = {
-  header: 2,
+  header: 999,
   main: 1,
 };
 
