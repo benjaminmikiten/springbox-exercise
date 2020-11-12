@@ -2,7 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { motion, transform } from "framer-motion";
 
+import ColorRingGraphic from "./ColorRing.svg";
+import FamilyGraphic from "./FamilyGraphic.svg";
+import LadyGraphic from "./LadyGraphic.svg";
+
 const AnimationLayer = styled(motion.div)`
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -10,14 +17,17 @@ const AnimationLayer = styled(motion.div)`
   bottom: 0;
   right: 0;
   left: 0;
-  border: solid 1px white;
 `;
 
 const AnimationLayers = styled.div`
-  width: 600px;
-  height: 600px;
-  background: red;
+  width: 100%;
+  overflow: hidden;
   position: relative;
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
 `;
 
 const StickyWrapper = styled.div`
@@ -34,7 +44,6 @@ const StickyWrapper = styled.div`
 `;
 
 const StyledHeroAnimation = styled.div`
-  background: orange;
   width: 50%;
   position: absolute;
   height: 200vh;
@@ -60,10 +69,10 @@ const HeroAnimation = ({ progress }) => {
       <StickyWrapper>
         <AnimationLayers>
           {/* FOREGROUNDS, COME IN AND OUT FROM LEFT */}
-          <AnimationLayer animate={foregroundOutAnimation}>FOREGROUND 1</AnimationLayer>
-          <AnimationLayer animate={foregroundInAnimation}>FOREGROUND 2</AnimationLayer>
+          <AnimationLayer style={{ zIndex: 5, backgroundImage: `url('${FamilyGraphic}')` }} animate={foregroundOutAnimation}></AnimationLayer>
+          <AnimationLayer style={{ zIndex: 4, backgroundImage: `url('${LadyGraphic}')` }} animate={foregroundInAnimation}></AnimationLayer>
           {/* ROTATING RING*/}
-          <AnimationLayer animate={ringAnimation}>RING</AnimationLayer>
+          <AnimationLayer style={{ zIndex: 3, backgroundImage: `url('${ColorRingGraphic}')` }} animate={ringAnimation}></AnimationLayer>
           {/* FOREGROUNDS, FADE IN AND OUT*/}
           <AnimationLayer animate={backgroundOutAnimation}>BACKGROUND 1</AnimationLayer>
           <AnimationLayer animate={backgroundInAnimation}>BACKGROUND 2</AnimationLayer>
