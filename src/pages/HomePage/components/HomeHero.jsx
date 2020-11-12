@@ -27,7 +27,6 @@ const StyledHeroSection = styled.div`
 
   height: 100vh;
   min-height: 1200px;
-  border: solid 1px red;
 
   > div {
     padding: 90px 0;

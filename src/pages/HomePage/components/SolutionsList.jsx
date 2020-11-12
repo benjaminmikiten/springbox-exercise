@@ -14,6 +14,7 @@ const SolutionsListItemContent = styled.div`
     padding-bottom: 0.75rem;
   }
 `;
+
 const SolutionsListItemImage = styled.div`
   width: calc(100% * 60px);
   margin: 0 -30px;
@@ -34,7 +35,6 @@ const StyledSolutionsListItem = styled(motion.div)`
   position: relative;
   > div {
     height: 100%;
-    border: solid 1px red;
   }
 
   &:nth-child(1) {

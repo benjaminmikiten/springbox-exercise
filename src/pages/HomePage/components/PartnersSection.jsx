@@ -24,7 +24,6 @@ const PartnerItems = styled(motion.ul)`
 const PartnerItemsWrapper = styled.div`
   width: 100%;
   overflow: hidden;
-  border: solid 1px red;
 `;
 
 const PartnerItem = () => {
@@ -60,7 +59,6 @@ const StyledProgressBar = styled.div`
   position: relative;
   height: 8px;
   padding-top: 4rem;
-  border: solid 1px blue;
 `;
 
 const Bar = styled(motion.div)`
