@@ -35,7 +35,7 @@ const StickyWrapper = styled.div`
   top: 0;
   width: 100%;
   height: 100vh;
-  min-height: 1200px;
+  min-height: 640px;
 
   display: flex;
   flex-direction: column;
