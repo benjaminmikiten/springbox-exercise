@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Theme from "./style/Theme";
 import { GlobalStyle, BodyStyle } from "./style/GlobalStyle";
-
+import Layout from "./components/Layout";
 import Routes from "./Routes";
 function App() {
   return (
@@ -10,7 +10,9 @@ function App() {
       <GlobalStyle />
       <BodyStyle />
       <Router>
-        <Routes />
+        <Layout>
+          <Routes />
+        </Layout>
       </Router>
     </Theme>
   );
