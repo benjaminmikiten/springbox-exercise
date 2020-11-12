@@ -167,12 +167,18 @@ const TEXT_STYLES = {
   siteTitle: css``,
 };
 
+const Z_INDEXES = {
+  header: 2,
+  main: 1,
+};
+
 export const ThemeSettings = {
   colors: { ...COLORS_PALETTE, ...COLORS_SEMANTIC },
   fonts: FONTS,
   textStyles: TEXT_STYLES,
   grid: { ...GRID, ...GRID_HELPERS },
   devices: DEVICE_WIDTHS.queries,
+  zIndexes: Z_INDEXES,
 };
 
 const Theme = ({ children }) => <ThemeProvider theme={ThemeSettings}>{children}</ThemeProvider>;
