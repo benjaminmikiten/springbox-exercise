@@ -1,12 +1,24 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import { motion, transform } from "framer-motion";
 import { ScrollWrapperContext } from "../../../components/ScrollWrapper";
-const AnimationLayer = styled.div``;
+
+const AnimationLayer = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: solid 1px white;
+`;
 
 const AnimationLayers = styled.div`
   width: 600px;
   height: 600px;
   background: red;
+  position: relative;
 `;
 
 const StickyWrapper = styled.div`
@@ -34,19 +46,31 @@ const StyledHeroAnimation = styled.div`
 
 const HeroAnimation = () => {
   const progress = useContext(ScrollWrapperContext);
-  console.log(progress);
+
+  // ring animation maps progress 0-1 to 0-180 deg rotation
+  const ringAnimation = { transform: `rotate(${transform(progress, [0, 1], [0, 180])}deg)` };
+
+  // foreground animations map progress 0-1 to left offset.
+  const foregroundOutAnimation = { left: transform(progress, [0, 1], ["0%", "100%"]), opacity: transform(progress, [0, 1], [1, 0]) };
+  const foregroundInAnimation = { left: transform(progress, [0, 1], ["100%", "0%"]), opacity: progress };
+
+  // background animations map progress 0-1 to opacity .
+  const backgroundOutAnimation = { opacity: transform(progress, [0, 1], [1, 0]) };
+  const backgroundInAnimation = { opacity: progress };
+
   return (
     <StyledHeroAnimation>
       <StickyWrapper>
         <AnimationLayers>
           {/* FOREGROUNDS, COME IN AND OUT FROM LEFT */}
-          <AnimationLayer>FOREGROUND 1</AnimationLayer>
-          <AnimationLayer>FOREGROUND 2</AnimationLayer>
+          <AnimationLayer animate={foregroundOutAnimation}>FOREGROUND 1</AnimationLayer>
+          <AnimationLayer animate={foregroundInAnimation}>FOREGROUND 2</AnimationLayer>
           {/* ROTATING RING*/}
-          <AnimationLayer>RING</AnimationLayer>
+          <AnimationLayer animate={ringAnimation}>RING</AnimationLayer>
           {/* FOREGROUNDS, FADE IN AND OUT*/}
-          <AnimationLayer>BACKGROUND 1</AnimationLayer>
-          <AnimationLayer>BACKGROUND 2</AnimationLayer>
+          <AnimationLayer animate={backgroundOutAnimation}>BACKGROUND 1</AnimationLayer>
+          <AnimationLayer animate={backgroundInAnimation}>BACKGROUND 2</AnimationLayer>
+          {/* SPEECH BUBBLE */}
         </AnimationLayers>
       </StickyWrapper>
     </StyledHeroAnimation>
