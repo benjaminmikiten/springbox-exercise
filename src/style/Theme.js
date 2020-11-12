@@ -118,7 +118,7 @@ const GRID_HELPERS = {
       padding-right: calc(${GRID.desktop.margin}* 1px);
       padding-left: calc(${GRID.desktop.margin}* 1px);
     }
-    max-width: 1200px;
+    max-width: 1600px;
   `,
 };
 
