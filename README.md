@@ -9,6 +9,8 @@ I presumed you want to learn from this:
 3. What I identify as needing to be addressed in the first four hours of a new site
 4. How I address and build complex animated features.
 
+I found the large number of scroll-based animations compelled me to braodly tackle them all to see what, if I was taking this site to fruition, would require further investment. Ultimately they were all very straightforward and would just need a final polish with some detailed comps and assets.
+
 ## Overview
 
 To that end, I approached this as if I had just gotten this comp from a designer, and I needed to build a quick working prototype. Something that quickly touched on as many of the macro features and worked out simply which interaction and animations might pose immediate problems while laying a groundwork that could be be iterated upon and polished.
