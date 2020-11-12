@@ -61,9 +61,9 @@ const HeroSections = () => {
       </HeroSection>
       <HeroSection>
         <HeroSectionContent>
-          <h2>Conversational AI that redefines the patient journey</h2>
+          <h2>We believe in automation with empathy</h2>
           <p>
-            Our HIPAA-compliant virtual assistants mirror human behavior to effectively serve patients — from appointments to outcomes. This increases efficiency and reduces cost, allowing you to <strong>enable real change across your organization.</strong>
+            That means <strong>creating technology that provides a human touch between you and your patients</strong>. It’s what drives us to build conversational AI that’s intuitive to use, manage and scale, empowering you to offer care that goes beyond expectations.
           </p>
         </HeroSectionContent>
       </HeroSection>
