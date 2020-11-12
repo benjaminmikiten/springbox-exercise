@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import HomeHero from "./components/HomeHero";
 
 const StyledHomePage = styled.div``;
 
 const HomePage = () => {
   return (
     <StyledHomePage>
-      {/* Hero */}
+      <HomeHero />
       {/* PartnersSection */}
       {/* OurSolutionsSection */}
       {/* CovidSolutionsSection */}
