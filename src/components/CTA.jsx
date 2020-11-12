@@ -16,6 +16,10 @@ const StyledCTA = styled.a`
   font-weight: 700;
   font-size: 1.2rem;
   color: ${({ theme }) => theme.colors.type};
+  &:focus {
+    background-position: 100% 100%;
+    color: ${({ theme }) => theme.colors.type};
+  }
   @media (hover: hover) {
     &:hover {
       background-position: 100% 100%;
