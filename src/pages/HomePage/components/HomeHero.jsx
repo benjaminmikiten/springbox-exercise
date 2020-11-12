@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import ScrollWrapper from "../../../components/ScrollWrapper";
-const StyledHomeHero = styled.section``;
+import HeroAnimation from "./HeroAnimation";
+
+const StyledHomeHero = styled.section`
+  width: 100%;
+  position: relative;
+`;
 
 const HeroSectionContent = styled.div`
   // A container for the title and blurb
@@ -36,6 +41,7 @@ const StyledHeroSection = styled.div`
 `;
 
 const HeroSection = ({ children }) => {
+  // One whole frame of the scrolling header.
   return (
     <StyledHeroSection>
       <div>{children}</div>
@@ -75,7 +81,7 @@ const HomeHero = () => {
     <StyledHomeHero>
       <ScrollWrapper>
         <HeroSections />
-        {/* <HeroAnimation /> */}
+        <HeroAnimation />
       </ScrollWrapper>
     </StyledHomeHero>
   );
