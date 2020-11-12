@@ -3,10 +3,7 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   z-index: ${({ theme }) => theme.zIndexes.footer};
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   > div {
     ${({ theme }) => theme.grid.LayoutContainer}
     padding-top: 1rem;
