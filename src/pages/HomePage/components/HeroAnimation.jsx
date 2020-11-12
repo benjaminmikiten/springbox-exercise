@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { motion, transform } from "framer-motion";
-import { ScrollWrapperContext } from "../../../components/ScrollWrapper";
 
 const AnimationLayer = styled(motion.div)`
   width: 100%;
@@ -44,9 +43,7 @@ const StyledHeroAnimation = styled.div`
   right: 0;
 `;
 
-const HeroAnimation = () => {
-  const progress = useContext(ScrollWrapperContext);
-
+const HeroAnimation = ({ progress }) => {
   // ring animation maps progress 0-1 to 0-180 deg rotation
   const ringAnimation = { transform: `rotate(${transform(progress, [0, 1], [0, 180])}deg)` };
 

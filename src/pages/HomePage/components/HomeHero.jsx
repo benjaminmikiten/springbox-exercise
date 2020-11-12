@@ -1,4 +1,5 @@
 import React from "react";
+import { Scene, Controller } from "react-scrollmagic";
 import styled from "styled-components";
 import ScrollWrapper from "../../../components/ScrollWrapper";
 import HeroAnimation from "./HeroAnimation";
@@ -79,10 +80,16 @@ const HeroSections = () => {
 const HomeHero = () => {
   return (
     <StyledHomeHero>
-      <ScrollWrapper duration={"100%"} triggerHook={"onLeave"}>
-        <HeroSections />
-        <HeroAnimation />
-      </ScrollWrapper>
+      <Controller>
+        <Scene duration={"100%"} triggerHook={"onLeave"}>
+          {(progress) => (
+            <>
+              <HeroSections />
+              <HeroAnimation progress={progress} />
+            </>
+          )}
+        </Scene>
+      </Controller>
     </StyledHomeHero>
   );
 };
