@@ -29,7 +29,6 @@ const StyledCTA = styled.a`
 
 const CTA = ({ children, ...rest }) => {
   // TODO: SVG for arrow in span
-  // TOOD: :before for tan rectangle
   return (
     <StyledCTA {...rest}>
       {children}
